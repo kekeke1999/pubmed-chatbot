@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+
+  backend:
+    build:
+      context: ./backend
+    container_name: backend
+    ports:
+      - "8086:8086"
+    networks:
+      - opensearch-net
+
+networks:
+  opensearch-net:
+    driver: bridge
+

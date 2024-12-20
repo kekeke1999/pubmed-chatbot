@@ -1,0 +1,19 @@
+<mvc:View
+	controllerName="com.keke.chatbot.controller.App"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	class="messageListCenter"
+	displayBlock="true">
+	<Shell>
+		<App>
+			<pages>
+				<Page>
+					<content>
+						<mvc:XMLView viewName="com.keke.chatbot.view.MessageList"/>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
+

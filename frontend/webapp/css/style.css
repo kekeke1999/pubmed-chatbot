@@ -1,0 +1,39 @@
+/* html[dir="ltr"] .myAppDemoWT .myCustomButton.sapMBtn {
+    margin-right: 0.125rem
+ }
+ 
+ html[dir="rtl"] .myAppDemoWT .myCustomButton.sapMBtn {
+    margin-left: 0.125rem
+ } */
+ 
+ .myAppDemoWT .myCustomText {
+    /* display: inline-block; */
+    font-weight: bold;
+ }
+
+ .topElememt {
+   margin-top: 0%;
+ }
+ 
+.colorFont {
+   color: red;
+}
+.messageListCenter {
+   margin-top: 10px;
+   display: flex;
+   justify-content: center;
+   /* align-items: center; */
+   height: 100%;
+}
+
+.inputPanel {
+   margin-top: 5px;
+}
+
+.messageButton {
+   margin-left: 20px;
+}
+
+.iconMargin {
+   margin-right: 8px; /* 右边距 */
+}

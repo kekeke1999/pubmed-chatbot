@@ -1,0 +1,89 @@
+<mvc:View
+    controllerName="com.keke.chatbot.controller.MessageList"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    class="messageListCenter">
+    
+    <VBox class="topElememt">
+        <Panel
+            headerText="Medical ChatBot"
+            width="550px" 
+            height="600px">
+            <content>
+                
+                    <List id="chatList" height="600px" showSeparators="None">
+                        <items>
+                            <CustomListItem>
+                                
+                            </CustomListItem>
+                        </items>
+                    </List>
+            </content>
+        </Panel>
+
+        <Panel class="inputPanel" width="100%">
+
+            <HBox alignItems="Center">
+                <Label text="Publication Year: From"/>
+
+                <Select id="selectPublicationYearFrom" forceSelection="false" width="100px">
+                    <items>
+                        <core:Item key="2014" text="2014"/>
+                        <core:Item key="2015" text="2015"/>
+                        <core:Item key="2016" text="2016"/>
+                        <core:Item key="2017" text="2017"/>
+                        <core:Item key="2018" text="2018"/>
+                        <core:Item key="2019" text="2019"/>
+                        <core:Item key="2020" text="2020"/>
+                        <core:Item key="2021" text="2021"/>
+                        <core:Item key="2022" text="2022"/>
+                        <core:Item key="2023" text="2023"/>
+                    </items>
+                </Select>
+
+                <Label text=" To"/>
+
+                <Select id="selectPublicationYearTo" forceSelection="false" width="100px">
+                    <items>
+                        <core:Item key="2014" text="2014"/>
+                        <core:Item key="2015" text="2015"/>
+                        <core:Item key="2016" text="2016"/>
+                        <core:Item key="2017" text="2017"/>
+                        <core:Item key="2018" text="2018"/>
+                        <core:Item key="2019" text="2019"/>
+                        <core:Item key="2020" text="2020"/>
+                        <core:Item key="2021" text="2021"/>
+                        <core:Item key="2022" text="2022"/>
+                        <core:Item key="2023" text="2023"/>
+                    </items>
+                </Select>
+            </HBox>
+
+            <HBox alignItems="Center">
+                <Label labelFor="keywordLabel" text="Keyword: Key: "/>
+
+                <Select id="key" forceSelection="false" width="150px">
+                    <items>
+                        <core:Item key="journal" text="journal"/>
+                        <core:Item key="title" text="title"/>
+                        <core:Item key="pmid" text="pmid"/>
+                        <core:Item key="authors" text="authors"/>
+                        <core:Item key="first_author" text="first author"/>
+                    </items>
+                </Select>
+
+                <Label text=" Value: "/>
+
+                <Input id="keywordInput" valueLiveUpdate="true" width="150px" placeholder="Type a keyword..." />
+            </HBox>
+
+            <HBox class="inputBox" alignItems="Center">
+                <Input id="chatInput" class="messageInput" valueLiveUpdate="true" width="400px" placeholder="Type a question..." />
+                <Button text="Send" class="messageButton" press=".onAskQuestion" width="100px"/>
+            </HBox>
+        </Panel>
+    </VBox>
+    
+</mvc:View> 
+
