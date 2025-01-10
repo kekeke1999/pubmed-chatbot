@@ -112,16 +112,20 @@ class TermYearRangeSearchStrategy(SearchStrategy):
 
 
 class SearchStrategyFactory:
+    BASIC_QUERY_LENGTH = 1
+    TERM_QUERY_LENGTH = 3
+    YEAR_RANGE_QUERY_LENGTH = 4
+    TERM_YEAR_RANGE_QUERY_LENGTH = 5
     
     @staticmethod
     def get_strategy(query_parts, client, model_id):
-        if len(query_parts) == 1:
+        if len(query_parts) == BASIC_QUERY_LENGTH:
             return BasicSearchStrategy(client, model_id)
-        elif len(query_parts) == 3:
+        elif len(query_parts) == TERM_QUERY_LENGTH:
             return TermSearchStrategy(client, model_id)
-        elif len(query_parts) == 4:
+        elif len(query_parts) == YEAR_RANGE_QUERY_LENGTH:
             return YearRangeSearchStrategy(client, model_id)
-        elif len(query_parts) == 5:
+        elif len(query_parts) == TERM_YEAR_RANGE_QUERY_LENGTH:
             return TermYearRangeSearchStrategy(client, model_id)
         else:
             raise ValueError("Invalid query format")
