@@ -1,4 +1,4 @@
-# PubMed Abstracts ChatBot
+# PubMed ChatBot
 
 ## Description
 
